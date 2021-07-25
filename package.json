@@ -1,0 +1,33 @@
+{
+  "name": "fireyshop",
+  "version": "1.0.0",
+  "description": "MERN E-Commerce web app for server site rendering",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/server",
+    "server": "nodemon server/server",
+    "client": "cd client && yarn start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "chalk": "^4.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
+  },
+  "repository": "https://github.com/firedev99/mern-fireyshop.git",
+  "author": "firedev99",
+  "license": "MIT"
+}
